@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2? family= Furacão & display=swap');
+
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+.content {
+    display: flex;
+    margin: auto;
+}
+.rtable {
+    width: 100%;
+    text-align: center;
+}
+.figure {
+    width: 100%;
+
+}
+    .rtable thead{background: black; font-weight: bold; color: rgb(255, 255, 255);}
+    .rtable tbody tr:nth-child(2n){background: rgb(186, 181, 181);}
+
+@media screen and (max-width: 480px){
+    .content{width: 94%;}
+    .rtable tbody td, thead th{display: flex; flex-direction: column;}
+}
+@media only screen and (min-width: 1200px){
+    .content{width: 100%;}
+}
+.rtable th , .rtable td{
+    padding: 3px;
+}
+body {
+    background-image: url(./bannerbody..jpg);
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-family: 'Hurricane', cursiva;
+    color: #40329b;
+}
+h1 {
+    text-align: center;
+    color: #000000;
+    font-size: 45px;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+h1:hover, color{
+    -webkit-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    transform: scale(1.4);
+    color: 	#483D8B;
+    
+}
+h4 {
+    color: #8B0000;
+    font-size: 50px;
+}
+figure{
+    margin: 15px;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+img {
+    max-width: 1200px;
+    min-width: 300px;
+}
+figure p {
+    text-align: center;
+}
+
+.whatsapp-link {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 1px 1px 2px #888;
+    z-index: 1000;
+}
+.fa-whatsapp {
+    margin-top: 16px ;
+}
+a:hover {
+    color: #8B0000;
+    
+}

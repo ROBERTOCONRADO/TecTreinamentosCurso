@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div#msg {
+            font: normal 20pt arial;
+            background-color: black;
+            color: rgb(174, 28, 28);
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+    <title>Eventos DOM</title>
+</head>
+<body>
+    <div id="msg">
+        Interaja...
+    </div>
+    <script>
+        let msg = document.querySelector('div#msg')
+        msg.addEventListener('click', clicar)
+        msg.addEventListener('mouseenter', entrar)
+        msg.addEventListener('mouseout', sair)
+        msg.addEventListener('mousemove', mover)
+        function clicar() {
+            msg.innerText = 'Clicou'
+        }
+        function entrar() {
+            msg.innerText = 'Entrou'
+            msg.style.background = 'violet'
+        }
+        function sair() {
+            msg.innerText = 'Saiu'
+            msg.style.background = 'black'
+            msg.style.color = 'red'
+        } 
+        function mover() {
+            msg.style.color = 'yellow'
+        }
+    </script>
+</body>
+</html>
+<!--EVENTOS DE DOM-->
+<!--EXISTEM DUAS MANEIRAS DE USAR JAVASCRIPT , DIRETAMENTE NO HTML OU BUSCANDO POR ID,CLASSE, TAG NAME, NAME ,QUERYSELECTOR-->
+<!--QUANDO COLOCAR A FUNÇÃO PARA RODAR E NADA FUNCIONAR, PARA DESCOBRIR O ERRO NA MAIORIOA DOS CASOS CLICA PARA INSPECIONAR, DIRETAMENTE VAI PERCEBER O ERRO E NO CONSOLE MOSTRARÁ A LINHA DO ERRO-->

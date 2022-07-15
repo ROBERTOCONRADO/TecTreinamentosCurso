@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <style>
+    body {
+        background-color: rgb(112,128,144);
+        font: normal 15pt arial;
+    }
+    header {
+        color: white;
+        text-align: center;
+    }
+    section{
+        background: white;
+        border-radius: 10px;
+        padding: 15px;
+        width: 400px;
+        margin: auto;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.375);
+    }
+    section:hover {
+        background-color: rgb(78, 100, 94);
+        transition: 2s;
+        /*white-space: pre-line;*/ 
+    }
+    input {
+        font-weight: bold;
+    }
+    input:hover {
+        background-color: slategray;
+    }
+    #botao {
+        width: 100%;
+        padding: 8px;
+        background-color:slategray;
+    }
+    #botao:hover {
+        background-color:rgb(46, 53, 60);
+        color: blanchedalmond;
+    }
+    div {
+        text-align: center;
+        padding: 8px;
+        font-weight: bold;
+    }
+    footer {
+        color: white;
+        text-align: center;
+        font-style: italic;
+    }
+    footer p:hover {
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #228B22;
+    }
+    .whatsapp-link {
+        color: rgb(255, 255, 255);
+        text-align: center;
+        font-size: 30px;
+        border-radius: 50%;
+    }
+    .fa-whatsapp {
+        margin-top: 1px ;
+    }
+    a:hover {
+        color: #228B22;
+    }
+    .grow:hover {
+        -webkit-transform: scale(2.1);
+        -ms-transform: scale(2.1);
+        transform: scale(2.1);
+    }
+    #corpo {
+        transition: 2s;
+    }
+    #txtn {
+        width: 60px;
+    }
+    #input2 {
+        width: 220px;
+    }
+    </style>
+    <title>Tabuada</title>
+</head>
+<body id="corpo">
+    <header>
+        <h1>Tabuada</h1>
+    </header>
+    <section id="sect"  onmouseout="sair()" onmouseover="entrar()">
+        <div>
+            <p>Número: <input type="number" name="num" id="txtn"><input id="input2" type="button" value="Gerar Tabuada" onclick="tabuada()"></p>
+        </div>
+        <div>
+            <select name="tabuada" id="seltab" size="10">
+                <option>Digite um número acima.</option>
+            </select><!--size faz com que n~so necessite clicar para ver as opçoes-->
+        </div>
+    </section>
+    <footer>
+        <p>&copy; Roberto Conrado</p>
+        <a class="whatsapp-link" href="https://web.whatsapp.com/send?phone=5577991556513" target="_blank">
+            <i class="grow fa fa-whatsapp"></i>
+    </footer>
+    <script>
+        function tabuada() {
+            let num = document.getElementById('txtn')
+            let tab = document.getElementById('seltab')
+            if (num.value.length == 0) {
+                window.alert('Por favor, Digite um número!')
+            } else {
+                let n = Number(num.value)
+                let c = 1
+                tab.innerHTML = ''
+                while (c <= 10) {
+                    let item = document.createElement('option')
+                    item.text = `${n} x ${c} = ${n*c}`
+                    tab.appendChild(item)
+                    c++
+                }
+            }
+            
+        }
+    </script>
+</body>
+</html>

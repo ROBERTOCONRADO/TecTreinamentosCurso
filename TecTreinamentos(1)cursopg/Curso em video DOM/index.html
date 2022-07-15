@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: black;
+            color: rgb(191, 191, 191);
+            font: normal 20pt arial;
+        }
+    </style>
+    <title>Aprendendo o DOM</title>
+</head>
+<body>
+    <h1>Iniciando Estudos DOM</h1>
+    <p>Aqui vai o resultado</p><!--[0]-->
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript.</p><!--[1]-->
+    <div id="msg">clique em Mim</div>
+    <script>/* Selecionando por Marca*/
+        var corpo = window.document.body
+        var p0 = document.getElementsByTagName('p')[1]
+        window.document.write('Está escrito assim: ' + p0.innerText)
+        p0.style.color = 'blue'
+        corpo.style.background = 'black'
+        document.write(p0.innerHTML)/* vai buscar o texto com o strong incluso*/ 
+
+        /*Por ID*/
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'Olá, Eu sou goku.'
+        /*Por name*/
+        /* digamos que a div tenha no lugar de ID name="msg"
+        var d = window.document.getElementsByName('msg')[0]
+        d.innerText = 'Ola, eu sou roberto'*/
+        /* por classe é da mesma forma*/
+        var d = window.document.querySelector('div#msg')
+        d.style.color = 'blue'
+        /* querySelector é mais pratico*/
+    </script>
+</body>
+</html>
